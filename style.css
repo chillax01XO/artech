@@ -1,0 +1,400 @@
+body {
+    font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(45deg,#a1ffce,#faffd1);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/*CONTAINER*/
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px
+}
+
+/*INTRO*/
+.intro {
+    width: 100%;
+    height: 100vh;
+    
+}
+.intro_title {
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.intro_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto 0;
+    
+    background-color: black;
+}
+.intro_inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+/*HEADER*/
+.header {
+    width: 100%;
+    padding-top: 30px;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
+}
+/*NAV*/
+.nav {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.nav_link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 3px;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    transition: color .1s linear;
+    text-shadow: 0px 0 0px #000, 
+0 1px 0px #000, 
+0px 0 0px #000, 
+0 0px 0px #000;
+}
+.nav_link:after {
+    content: "";
+    display:block;
+    width: 100%;
+    height: 3px;
+    display: none;
+    opacity: 0;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    text-shadow: 1px 0 1px #000, 
+0 1px 1px #000, 
+-1px 0 1px #000, 
+0 -1px 1px #000;
+    transition: opacity .1s linear;
+}
+
+.nav_link:hover {
+    color:white; 
+}
+.nav_link:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+/*BUTTON*/
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 30px; 
+    border: 3px solid black;
+    
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    transition: background .1s linear, color .1s linear;
+}
+.btn:hover {
+    background-color: black;
+    color: white; 
+}
+
+/*SECTION*/
+
+.section {
+    padding 80px 0;
+}
+
+.section_header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    
+    text-align: center;
+    
+}
+
+.section_title {
+    font-size: 45px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+}
+
+.section_title:after {
+    content: "";
+    display: block;
+     width: 60px;
+    height: 3px;
+    margin: 0 auto;
+    
+    background-color: black;
+}
+
+.section_text {
+    font-size: 25px;
+    color: black;
+    
+}
+
+
+/*ICONS*/ 
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.icons_items {
+    width: 380px;
+    background-color: black;
+}
+
+.icons_items:hover .icons_img {
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.icons_items:hover .icons_img img {
+       opacity: .3; 
+}
+
+
+.icons_img {
+    background: linear-gradient (to bottom,#a1ffce,#faffd1);
+    transition: transform .2s linear;
+}
+
+.icons_img img {
+    display:block;
+    transition: opacity .1s linear;
+}
+
+
+/*ACCOUNT*/
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+     background: white;
+}
+
+.form h1 {
+    margin: 30px 100px;
+     padding: 0;
+    text-align: center;
+     color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.input_form {
+    margin: 15px 40px;
+    text-align: center;
+}
+
+
+.input_form input {
+    padding: 10px;
+    width: 100%;
+    color: black;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.input_form input[type="submit"] {
+display: inline-block;
+    vertical-align: top;
+    padding: 10px 30px; 
+    
+    
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    transition: background .1s linear, color .1s linear;
+}
+.input_form input[type="submit"]:hover {
+    background-color: black;
+    color: white; 
+}
+
+.form a {
+    display: block;
+    padding: 0 0 30px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    transition: .3s;
+    
+}
+.form a:hover {
+    color: white;
+     text-shadow: 1px 0 1px #000, 
+0 1px 1px #000, 
+-1px 0 1px #000, 
+0 -1px 1px #000;
+}
+
+
+/*parralax*/
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  perspective: 1px; 
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: #fff;
+}
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 20%;
+  transform-style: inherit;
+  width: 100vw;
+}
+header:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: center;
+  max-height: 1000vh;
+  background-image:url('https://www.ptc.com/-/media/DE/Images/News/ptc-and-bitkom-academy-instruct-ar-experts.jpeg');
+      background-repeat: no-repeat;
+     background-size: cover;
+  transition: 1s;
+    opacity: .5;
+ 
+  /* Параллакс */
+transform: translateZ(-1px) scale(2);
+}
+header h1 {
+  margin-top: -100px;
+  font-size: 42px;
+}
+
+.text_par {
+    font-size: 120px;
+}
+
+.text_small {
+    font-size: 45px;
+}
+
+/*SB*/
+
+.sb1 {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+     
+   
+    opacity: .9;
+    color: black;
+    text-decoration: none;
+    font-size:55px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.sb1: hover{
+    background: black;
+    color: white;
+     text-shadow: 1px 0 1px #000, 
+0 1px 1px #000, 
+-1px 0 1px #000, 
+0 -1px 1px #000;
+}
+
+.bts {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 30px; 
+    border: 3px solid black;
+    
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    transition: background .1s linear, color .1s linear;
+}
+.bts:hover {
+    background-color: black;
+    color: white; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
